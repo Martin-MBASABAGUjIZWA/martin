@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>my first website</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+	<div class="container">
+<h1 style="margin-right: 300px;text-transform: capitalize;color: gray;">izzyy</h1>
+		<div class="menu">
+
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#About">About </a></li>
+				<li><a href="">Category</a></li>
+				<li><a href="">Services</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="">Address</a></li>
+			</ul>
+		</div>
+		<section>
+			<div class="contain">
+				
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="images/image1.avif"></div>
+    <div class="swiper-slide"><img src="images/image2.avif"></div>
+    <div class="swiper-slide"><img src="images/image3.avif"></div>
+    <div class="swiper-slide"><img src="images/image4.webp"></div>
+    
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+			</div>
+
+		</section>
+		
+
+		</div>
+		<div class="content">
+			<h1 style="text-transform: capitalize; color: orangered; font-size: 25px;">
+				welcome to izzyy electronic shop we hope that you will be satisfied
+			</h1>
+			<p style="margin-top: 30px;color: black; font-size: 18px;">Lorem ipsum dolor sit amet,
+				 consectetur adipisicing elit, sed do eiusmod tempor incididunt
+				  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+					  commodo consequat. Duis aute irure dolor in reprehenderit in
+						voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+						 deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="account">
+			<button onclick="alert('Do you have an account?? login')"><a href="izz.html">login</a></button>
+			<button onclick="confirm('Do you want to create account')"><a href="signup.html">signup</a></button>
+		</div>
+        <h2 style="text-align: center;text-transform: capitalize;margin-top: 10px;">you can create account in order to buy some of our products</h2>
+	</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+	const swiper = new Swiper('.swiper', {
+      autoplay: {
+      	delay: 4000,
+      	disableOnInteraction: false,
+      },
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+  },
+
+ 
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+</script>
+<section>
+	<div id="About">
+		 <header>
+        <h1>Welcome to Our Electronics Store</h1>
+    </header>
+    <nav>
+        <!-- Navigation links here -->
+    </nav>
+    <main>
+    	<h2 style="text-align:center;">About Us</h2>
+        <section id="about">
+            
+            <div class="p">
+            <img src="image5.avif">
+            </div>
+            <div class="h">
+            <p>Welcome to our electronics store! We are passionate <br> about providing the latest and greatest electronic <br> devices to our customers. Our team works tirelessly to <br> ensure that you have access to top-quality products at <br> competitive prices.</p>
+            <p>At our store, you'll find a wide selection of <br> smartphones, laptops, tablets, gaming <br>consoles, and much more. Whether <br> you're a tech enthusiast or simply looking <br> for a reliable device, we have something <br> for everyone.</p>
+            <p>We strive to deliver exceptional customer service <br> and a seamless shopping experience. Our
+             <br>knowledgeable staff is here to assist you  with <br> any questions or concerns you may have. 
+             <br>Your satisfaction is our top priority!</p>
+             </div>
+        </section>
+    </main>
+	</div>
+</section>
+</body>
+</html>

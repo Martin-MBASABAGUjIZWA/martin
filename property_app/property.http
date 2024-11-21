@@ -1,0 +1,21 @@
+### GET all properties
+
+GET http://127.0.0.1:8000/property_app/Unit
+### POST new student
+
+POST http://127.0.0.1:8000/property_app/Unit
+content-type: application/json
+
+{
+"id": 4,
+"unit_number": 45,
+"bedrooms": 78,
+"rent": 32,
+"is_available": true,
+"property": 5
+}
+
+
+
+
+
