@@ -1,21 +1,178 @@
-### GET all properties
+### GET all units
 
-GET http://127.0.0.1:8000/property_app/Unit
-### POST new student
+GET http://127.0.0.1:8000/property_app/units/
+Authorization: Bearer your_access_token
 
-POST http://127.0.0.1:8000/property_app/Unit
-content-type: application/json
+### POST new unit### GET all units
+
+GET http://127.0.0.1:8000/property_app/units/
+Authorization: Bearer your_access_token
+
+### POST new unit
+
+POST http://127.0.0.1:8000/property_app/units/
+Content-Type: application/json
 
 {
-"id": 4,
-"unit_number": 45,
-"bedrooms": 78,
-"rent": 32,
-"is_available": true,
-"property": 5
+    "unit_number": 45,
+    "bedrooms": 2,
+    "rent": 1200,
+    "is_available": true,
+    "property": 5
 }
 
+### PUT to update an existing unit
+
+PUT http://127.0.0.1:8000/property_app/units/1/
+Content-Type: application/json
+Authorization: Bearer your_access_token
+
+{
+    "unit_number": 46,
+    "bedrooms": 3,
+    "rent": 1300,
+    "is_available": false,
+    "property": 5
+}
+
+### DELETE an existing unit
+
+DELETE http://127.0.0.1:8000/property_app/units/1/
+Authorization: Bearer your_access_token
+### GET all properties
+
+GET http://127.0.0.1:8000/property_app/properties/
+Authorization: Bearer your_access_token
+
+### POST new property
+
+POST http://127.0.0.1:8000/property_app/properties/
+Content-Type: application/json
+
+{
+    "name": "Luxury Apartment",
+    "location": "Downtown",
+    "units_available": 10,
+    "price": 200000
+}
+
+### PUT to update an existing property
+
+PUT http://127.0.0.1:8000/property_app/properties/1/
+Content-Type: application/json
+Authorization: Bearer your_access_token
+
+{
+    "name": "Luxury Apartment Updated",
+    "location": "Uptown",
+    "units_available": 8,
+    "price": 210000
+}
+
+### DELETE an existing property
+
+DELETE http://127.0.0.1:8000/property_app/properties/1/
+Authorization: Bearer your_access_token
 
 
+### GET all leases
+
+GET http://127.0.0.1:8000/property_app/leases/
+Authorization: Bearer your_access_token
+
+### POST new lease
+
+POST http://127.0.0.1:8000/property_app/leases/
+Content-Type: application/json
+
+{
+    "tenant": 1,
+    "unit": 5,
+    "start_date": "2023-10-01",
+    "end_date": "2024-10-01",
+    "amount": 1200
+}
+
+### PUT to update an existing lease
+
+PUT http://127.0.0.1:8000/property_app/leases/1/
+Content-Type: application/json
+Authorization: Bearer your_access_token
+
+{
+    "tenant": 1,
+    "unit": 5,
+    "start_date": "2023-10-05",
+    "end_date": "2024-10-05",
+    "amount": 1250
+}
+
+### DELETE an existing lease
+
+DELETE http://127.0.0.1:8000/property_app/leases/1/
+Authorization: Bearer your_access_token
 
 
+### GET all tenants
+
+GET http://127.0.0.1:8000/property_app/tenants/
+Authorization: Bearer your_access_token
+
+### POST new tenant
+
+POST http://127.0.0.1:8000/property_app/tenants/
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "1234567890"
+}
+
+### PUT to update an existing tenant
+
+PUT http://127.0.0.1:8000/property_app/tenants/1/
+Content-Type: application/json
+Authorization: Bearer your_access_token
+
+{
+    "name": "John Doe Updated",
+    "email": "john.doe.updated@example.com",
+    "phone": "0987654321"
+}
+
+### DELETE an existing tenant
+
+DELETE http://127.0.0.1:8000/property_app/tenants/1/
+Authorization: Bearer your_access_token
+
+
+POST http://127.0.0.1:8000/property_app/Unit/
+Content-Type: application/json
+
+{
+    "unit_number": 45,
+    "bedrooms": 2,
+    "rent": 1200,
+    "is_available": true,
+    "property": 5
+}
+
+### PUT to update an existing unit
+
+PUT http://127.0.0.1:8000/property_app/units/1/
+Content-Type: application/json
+Authorization: Bearer your_access_token
+
+{
+    "unit_number": 46,
+    "bedrooms": 3,
+    "rent": 1300,
+    "is_available": false,
+    "property": 5
+}
+
+### DELETE an existing unit
+
+DELETE http://127.0.0.1:8000/property_app/units/1/
+Authorization: Bearer your_access_token
