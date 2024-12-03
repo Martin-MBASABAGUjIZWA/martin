@@ -16,6 +16,7 @@ html{
 	margin-left: 300px;
 	width: 100%;
 	height: 60px;
+	margin-bottom:30px;
 }
 .menu ul{
 	display: flex;
@@ -109,6 +110,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+	width: 100%;
 }
 
 header, footer {

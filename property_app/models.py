@@ -8,9 +8,12 @@ class Property(models.Model):
     address = models.CharField(max_length=200)
     description = models.TextField()
     number_of_units = models.IntegerField()
+    class Meta:
+        verbose_name=("Property")
+        verbose_name_plural=("Properties")
 
     def __str__(self):
-        return self.name
+        return f"{self.name} {self.address} {self.description}"
 
 
 class Unit(models.Model):
@@ -20,6 +23,9 @@ class Unit(models.Model):
     rent = models.IntegerField()
     is_available = models.BooleanField(default=True)
 
+    def __str__(self):
+        return f"{self.property}{self.unit_number} {self.bedrooms} {self.rent} {self.is_available}"
+
 
 class Tenant(models.Model):
     name = models.CharField(max_length=200)
@@ -27,7 +33,7 @@ class Tenant(models.Model):
     phone_number = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} {self.email} {self.phone_number}"
 
 
 class Lease(models.Model):
@@ -38,6 +44,6 @@ class Lease(models.Model):
     rent_amount = models.IntegerField()
 
     def __str__(self):
-        return self.tenant
+        return f"{self.tenant.name} {self.start_date}-{self.end_date}"
 
 # Create your models here.
